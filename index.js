@@ -30,7 +30,9 @@ app.post('/userinfo', (req, res) => {
   //Store the options for Zoom API which will be used to make an API call later.
   var options = {
     //You can use a different uri if you're making an API call to a different Zoom endpoint.
-    uri: "https://api.zoom.us/v2/users/"+email, 
+    // uri: "https://api.zoom.us/v2/users/"+email,   // WORKS
+    // uri: "https://api.zoom.us/v2/accounts/me/settings",     // WORKS
+    uri: "https://api.zoom.us/v2/accounts/50883334/settings",     // FAILED
     qs: {
         status: 'active' 
     },
